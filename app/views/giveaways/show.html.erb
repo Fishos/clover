@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @giveaway.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @giveaway.description %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @giveaway.status %>
+</p>
+
+<p>
+  <strong>Begin giveaway:</strong>
+  <%= @giveaway.begin_giveaway %>
+</p>
+
+<p>
+  <strong>End giveaway:</strong>
+  <%= @giveaway.end_giveaway %>
+</p>
+
+<%= link_to 'Edit', edit_giveaway_path(@giveaway) %> |
+<%= link_to 'Back', giveaways_path %>
