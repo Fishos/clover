@@ -16,6 +16,34 @@
 
   <tbody>
     <% @giveaways.each do |giveaway| %>
+    <div class="movie_card" id="bright">
+  <div class="info_section">
+    <div class="movie_header">
+      <img class="locandina" src="https://movieplayer.net-cdn.it/t/images/2017/12/20/bright_jpg_191x283_crop_q85.jpg"/>
+      <h1><%= giveaway.title %></h1>
+<% if (giveaway.begin_giveaway - Time.now) > 0 %>
+      <h4>begin time:<%= giveaway.begin_giveaway %></h4>
+      <% else %>
+      <h4>end time: <%= giveaway.end_giveaway %><h4>
+      <%end%>S
+      <span class="minutes">117 min</span>
+      <p class="type">Action, Crime, Fantasy</p>
+    </div>
+    <div class="movie_desc">
+      <p class="text">
+       <%= giveaway.description %>
+      </p>
+    </div>
+    <div class="movie_social">
+      <ul>
+        <li><i class="material-icons">share</i></li>
+        <li><i class="material-icons"></i></li>
+        <li><i class="material-icons">chat_bubble</i></li>
+      </ul>
+    </div>
+  </div>
+  <div class="blur_back bright_back"></div>
+</div>
       <tr>
         <td><%= giveaway.title %></td>
         <td><%= giveaway.description %></td>

@@ -22,7 +22,7 @@ class GiveawaysController < ApplicationController
   # POST /giveaways
   def create
     @giveaway = Giveaway.new(giveaway_params)
-
+    @giveaway.user = current_user
     if @giveaway.save
       redirect_to @giveaway, notice: 'Giveaway was successfully created.'
     else
