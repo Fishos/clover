@@ -1,7 +1,11 @@
 
 
-<h1>Giveaways</h1>
+<div class="header-banner">
+  <div class="headertyper">
 
+    <div id="app" class="animated bounceInRight"></div>
+  </div>
+ </div>
 <table>
   <thead>
     <tr>
@@ -16,7 +20,7 @@
 
   <tbody>
     <% @giveaways.each do |giveaway| %>
-    <div class="movie_card" id="bright">
+    <div class="movie_card animated bounceInRight" id="bright">
   <div class="info_section">
     <div class="movie_header">
       <img class="locandina" src="https://movieplayer.net-cdn.it/t/images/2017/12/20/bright_jpg_191x283_crop_q85.jpg"/>
@@ -62,3 +66,27 @@
 
 <%= link_to 'New Giveaway', new_giveaway_path, :class =>
 'hollow button' %>
+
+
+<script>
+  var app = document.getElementById('app');
+
+  var typewriter = new Typewriter(app, {
+      loop: true
+  });
+
+  typewriter.typeString('Win amazing')
+      .pauseFor(500)
+      .deleteChars(7)
+      .typeString('insane prices!')
+      .pauseFor(2500)
+      .deleteAll()
+      .pauseFor(400)
+      .typeString('Earn tickets to win!')
+      .pauseFor(2500)
+      .deleteAll()
+      .pauseFor(400)
+      .typeString('The best products for free!')
+      .pauseFor(2500)
+      .start();
+</script>

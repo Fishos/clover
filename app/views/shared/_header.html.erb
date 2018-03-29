@@ -1,0 +1,40 @@
+
+<!-- <nav class="nav-side">
+      MENU
+      <a href="#" class="nav-toggle"></a>
+    </nav>
+ -->
+ <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn animated bounce" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<div id="navbar">
+    <a onclick="openNav()" class="fas fa-bars animated bounce"></a>
+
+</div>
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<!-- <div id="main">
+  ...
+</div> -->
+<script>
+  // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
